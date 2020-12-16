@@ -40,9 +40,9 @@ The above dependencies are specified in the [dependencies.yaml](dependencies.yam
 
 	cd catkin_ws/src
 	sudo apt-get install python3-vcstool
-	vcs-import < dvs_mosaic/dependencies.yaml
+	vcs-import < dvs_integrator_skeleton/dependencies.yaml
 
-The previous command should clone the the repositories into folders *catkin_simple*, *rpg_dvs_ros*, *glog_catkin*, *gflags_catkin*, *minkindr*, *eigen_checks*, *eigen_catkin* inside the src/ folder of your catking workspace, at the same level as this repository *dvs_mosaic*. They should NOT be inside the *dvs_mosaic* folder.
+The previous command should clone the the repositories into folders *catkin_simple* and *rpg_dvs_ros* inside the src/ folder of your catkin workspace, at the same level as this repository *dvs_integrator_skeleton*. They should NOT be inside the *dvs_integrator_skeleton* folder.
 
 
 ## Compile
