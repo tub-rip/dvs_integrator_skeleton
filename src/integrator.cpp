@@ -6,8 +6,7 @@ namespace dvs_integrator {
 
 Integrator::Integrator(ros::NodeHandle & nh, ros::NodeHandle nh_private) : nh_(nh)
 {
-  // Get parameters of display method
-  std::string display_method_str;
+  // Get parameters of the method
   nh_private.param<double>("cut_off", alpha_cutoff_, 5.);
 
   // Set up subscribers and publishers
@@ -26,7 +25,7 @@ Integrator::Integrator(ros::NodeHandle & nh, ros::NodeHandle nh_private) : nh_(n
   server_->setCallback(dynamic_reconfigure_callback_);
 
   // Contrast thresholds
-    // Later we may use varying contrast sensitivities
+  // Later we may use varying contrast sensitivities
   c_pos_ = 0.1;
   c_neg_ = 0.1;
 }
@@ -75,9 +74,9 @@ void Integrator::eventsCallback(const dvs_msgs::EventArray::ConstPtr& msg)
  */
 void Integrator::publishState()
 {
-  // Just publish the current state (time map and image)
+  // Publish the current state (time map and image)
 
-  // initialize, including header
+  // Initialize, including header
   cv_bridge::CvImage cv_image, cv_image_time;
   cv_image.header.stamp = ros::Time::now();
   cv_image.encoding = "mono8";
