@@ -4,6 +4,11 @@ Event-by-event processing in ROS C++ for the purpose of image reconstruction (us
 
 The package reads events from a topic and outputs the reconstructed images using per-pixel temporal filters (leaky integrators).
 
+## Slides and videos
+- [Slides](https://drive.google.com/file/d/1MtbzVMKebJq2I0FaG6CtmH0gEomAJ19h/view) 
+- [Direct integrator](https://youtu.be/BNwFeG4CSE4)
+- [Leaky integrator](https://youtu.be/4u-I9LNW4gw)
+
 ## Input / Output
 **Input**:
 - Events (topic)
