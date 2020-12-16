@@ -104,7 +104,7 @@ In another terminal play the bag with the event data:
 
 Press the space bar to  play / pause the reproduction of the bag. Event messages are accumulated in the subscriber of dvs_integrator, to avoid losing events for the reconstruction.
 	
-In another terminal open the dynamic reconfigure and play around with the parameter(s) in the window named `dvs_integrator`
+In another terminal open the dynamic reconfigure and play around with the parameter(s) in the window named `dvs_integrator_one`
 	
 	rosrun rqt_reconfigure rqt_reconfigure
 
@@ -114,7 +114,7 @@ End the program execution with `Ctrl + C` keyboard shortcut.
 
 
 ## (Optional) Possible extensions:
-- Interaction (using dynamic reconfifure). Add a parameter in the dynamic reconfigure GUI to change the contrast sensitivity online.
+- Interaction (using dynamic reconfigure). Add a parameter in the dynamic reconfigure GUI to change the contrast sensitivity online.
 - Currently we are displaying the events as they are arranged in the ROS messages. Add a parameter that allows to control the rate at which the reconstructed image is published. Use, for example a fixed number of events or a fixed time interval.
 
 ## Reference

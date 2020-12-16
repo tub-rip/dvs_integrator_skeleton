@@ -13,6 +13,7 @@ Integrator::Integrator(ros::NodeHandle & nh, ros::NodeHandle nh_private) : nh_(n
   // Set up subscribers and publishers
   // FILL IN...
 //  event_sub_ = ...
+  // Set the queue size to infinity to avoid dropping messages.
 
   image_transport::ImageTransport it_(nh_);
   // FILL IN...
@@ -25,8 +26,9 @@ Integrator::Integrator(ros::NodeHandle & nh, ros::NodeHandle nh_private) : nh_(n
   server_->setCallback(dynamic_reconfigure_callback_);
 
   // Contrast thresholds
+    // Later we may use varying contrast sensitivities
   c_pos_ = 0.1;
-  c_neg_ = 0.1; // Later we may use different contrast sensitivities for positive and negative events
+  c_neg_ = 0.1;
 }
 
 
@@ -57,11 +59,7 @@ void Integrator::eventsCallback(const dvs_msgs::EventArray::ConstPtr& msg)
   }
 
   // Process events in the message msg, one by one (in a loop)
-
-
-
-
-
+  // FILL IN...
 
 
   // Exit if there are no subscribers
