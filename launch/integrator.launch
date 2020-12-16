@@ -1,0 +1,16 @@
+<launch>
+  <!-- process events -->
+  <node name="dvs_integrator_one" pkg="dvs_integrator" type="dvs_integrator" output="screen">
+    <param name="cut_off" value="5."/>
+    <remap from="events" to="/dvs/events" />
+    <remap from="image_out" to="/event_integrator/image" />
+    <remap from="time_map" to="/event_integrator/time_map" />
+  </node>
+
+
+  <!-- display using rqt_image_view -->
+  <node name="image_view_left" pkg="rqt_image_view" type="rqt_image_view">
+  	<remap from="image" to="event_image_reconstruction"/>
+  </node>
+
+</launch>
