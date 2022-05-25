@@ -10,7 +10,7 @@
 
   <!-- display using rqt_image_view -->
   <node name="image_view_left" pkg="rqt_image_view" type="rqt_image_view">
-  	<remap from="image" to="event_image_reconstruction"/>
+  	<remap from="image" to="/event_integrator/image"/>
   </node>
 
 </launch>
